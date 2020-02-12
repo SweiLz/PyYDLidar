@@ -1,10 +1,11 @@
 
-from PyYDLidar.PyYDLidar import YDLidarX4, LaserScan
-
-import time
-import matplotlib.pyplot as plt
 import math
 import threading
+import time
+
+import matplotlib.pyplot as plt
+
+from PyYDLidar.PyYDLidar import LaserScan, YDLidarX4
 
 
 def draw():
@@ -47,13 +48,5 @@ if __name__ == "__main__":
         time.sleep(0.1)
         # print(point.angle, point.dist)
 
-        #     scan = lidar.getScanData()
-        #     for i in range(scan.ranges.shape[0]):
-        #         angle = scan.config.min_angle + i * scan.config.ang_increment
-        #         dist = scan.ranges[i]
-        #     print(scan.ranges)
-        #     # print("{}, {}".format(angle, dist))
-        # print(lidar._scan_node_count)  # , lidar._scan_node_buf)
-        # time.sleep(0.1)
     is_plot = False
     lidar.stopScanning()
